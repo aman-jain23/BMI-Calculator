@@ -1,42 +1,138 @@
-body{
-    background-color: pink;
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    /* background: linear-gradient(135deg, #000080, #003153);
+     */
+     background-color: #0f0e47;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
 }
-.container{
-    padding: 30px;
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
+    max-width: 400px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#height, #weight{
-    height: 25px;
-    width: 150px;
-    margin-top: 10px;
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
-#weight-guide{
-    margin-left: 30px;
-    margin-top: 30px;
+h1 {
+    color: #8686ac;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-#results{
-    margin-left: 30px;
-    margin-top: 30px;
-    font-size: 30px;
-    color: black;
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
 }
 
-button{
-    width: 200px;
-    height: 30px;
-    margin-top: 20px;
-    margin-left: 30px;
-    background-color: black;
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #8686ac;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #560591;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(86, 5, 145, 0.1);
+    color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #305CDE;
+    outline: none;
+    box-shadow: 0 0 10px rgba(48, 92, 222, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #305CDE;
     color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-h1{
-    padding-left: 10px;
-    padding-top: 10px;
+button:hover {
+    background-color: #560591;
+    transform: translateY(-3px);
+}
+
+#results {
+    margin-top: 25px;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+    background: rgba(48, 92, 222, 0.2);
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+#weight-guide {
+    margin-top: 30px;
+    text-align: left;
+    background: rgba(0, 49, 83, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#weight-guide h3 {
+    color: #8686ac;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#weight-guide p {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.under-weight, .normal-weight, .over-weight {
+    font-weight: 500;
+}
+
+/* Highlight colors for weight guide */
+.under-weight {
+    color: #FF6B6B;
+}
+
+.normal-weight {
+    color: #4CAF50;
+}
+
+.over-weight {
+    color: #FF6B6B;
 }
